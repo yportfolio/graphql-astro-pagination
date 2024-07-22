@@ -1,0 +1,20 @@
+---
+import { PaginationGroup } from "@/components/feature/PaginationGroup";
+import Layout from "../layouts/Layout.astro";
+import { gql } from "@apollo/client";
+import "@/global.css";
+import List from "@/components/feature/List";
+import type { AllPeople } from "@/lib/type";
+import { $allPeople, $counter } from "@/lib/store/listStore";
+import { Button } from "@/components/ui/button";
+import { Body } from "@/components/feature/Body";
+import type { init } from "astro/virtual-modules/prefetch.js";
+import { allTasks } from "nanostores";
+import App from "@/components/App";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="tw-container">
+    <App client:load />
+  </main>
+</Layout>
